@@ -1,0 +1,21 @@
+{
+  "form": "2026_Shift-check-in",
+  "category": "General",
+  "subject": null,
+  "tags": [
+    "Control Room",
+    "General"
+  ],
+  "fields": {
+    "Shift": null,
+    "Shifter Name": null,
+    "Shadow Shifter Name": null,
+    "Call MCR": null,
+    "Zoom": null,
+    "City of current location": null,
+    "Equipment for shift": null,
+    "General comments": null
+  },
+  "images": [],
+  "attachments": []
+}

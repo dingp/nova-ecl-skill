@@ -1,0 +1,32 @@
+{
+  "form": "2026_Start_Shift",
+  "category": "General",
+  "subject": null,
+  "tags": [
+    "Control Room",
+    "General"
+  ],
+  "fields": {
+    "Bulletin board": null,
+    "NOvA ECL": null,
+    "AD Elog": null,
+    "Zoom": null,
+    "Current RunCo": null,
+    "Current DAQ expert": null,
+    "Current DCS expert": null,
+    "Displays": null,
+    "FD Runs in progress": null,
+    "FD dashboard status": null,
+    "ND Runs in progress": null,
+    "ND dashboard status": null,
+    "Is NuMI beam running ?": null,
+    "NuMI beam intensity": null,
+    "NuMI beam power": null,
+    "Is BNB running?": null,
+    "BNB beam intensity": null,
+    "BNB beam power": null,
+    "comments": null
+  },
+  "images": [],
+  "attachments": []
+}

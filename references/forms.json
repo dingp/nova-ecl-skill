@@ -1,0 +1,1714 @@
+{
+  "source_url": "https://dbweb1.fnal.gov:8443/ECL/nova",
+  "inspected_at": "2026-10-27T20:26:53.004928+00:00",
+  "forms": {
+    "2026_Start_Shift": {
+      "category": "General",
+      "tags": [
+        "Control Room",
+        "General"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Start_Shift",
+      "observed_entry_id": "257937",
+      "fields": [
+        {
+          "name": "Bulletin board",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Have you checked the Bulletin Board?",
+          "help": "Open the shift bulletin board and refresh the webpage.",
+          "links": [
+            "https://cdcvs.fnal.gov/redmine/projects/novaoperations/wiki/ShiftBulletinBoard"
+          ]
+        },
+        {
+          "name": "NOvA ECL",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Reviewed recent entries in the ECL?",
+          "help": "Review recent entries in the ECL .",
+          "links": []
+        },
+        {
+          "name": "AD Elog",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Have you checked the AD E-log?",
+          "help": "The MCR shifter records your information in the AD E-log when you check in. Make sure that your information is correctly recorded: here . Please call them back if it is not correct or not visible after 30 minutes.",
+          "links": [
+            "https://www-bd.fnal.gov/Elog"
+          ]
+        },
+        {
+          "name": "Zoom",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Can you call into zoom?",
+          "help": "If not at a ROC , we don’t expect you to be called into zoom from your home for 8 hours. But please make sure you have the ability just in case. Join from PC, Mac, Linux, iOS or Android: https://fnal.zoom.us/j/93471617807 (the password can be found at docDB 55842 )",
+          "links": [
+            "https://fnal.zoom.us/j/93471617807",
+            "https://nova-docdb.fnal.gov/cgi-bin/sso/ShowDocument?docid=55842"
+          ]
+        },
+        {
+          "name": "Current RunCo",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [],
+          "html_default": [],
+          "label": "Who is the current RunCo?",
+          "help": "Who is the current run coordinator? You can find that information on the shift bulletin board .",
+          "links": [
+            "https://cdcvs.fnal.gov/redmine/projects/novaoperations/wiki/ShiftBulletinBoard"
+          ],
+          "dynamic_choices": true
+        },
+        {
+          "name": "Current DAQ expert",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Who is the current DAQ expert?",
+          "help": "See the shift bulletin board .",
+          "links": [
+            "https://cdcvs.fnal.gov/redmine/projects/novaoperations/wiki/ShiftBulletinBoard"
+          ]
+        },
+        {
+          "name": "Current DCS expert",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Who is the current DCS expert?",
+          "help": "See the shift bulletin board .",
+          "links": [
+            "https://cdcvs.fnal.gov/redmine/projects/novaoperations/wiki/ShiftBulletinBoard"
+          ]
+        },
+        {
+          "name": "Displays",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Are all display screens present?",
+          "help": "If not, see Shift Handbook for instructions for standard Control Room configuration.",
+          "links": [
+            "http://nova-nusoft.fnal.gov/shift/screens/"
+          ]
+        },
+        {
+          "name": "FD Runs in progress",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "List the FD run in progress",
+          "help": "Go to the snapshot of FD-CR-01 . Check that the timestamp on the upper right is up-to-date. List the current FD run in progress. Use the format: Run #/Subrun #, e.g. 29127/34",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/fd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "FD dashboard status",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Alarm/warning/ackeds in FD Dashboard",
+          "help": "List the number of entries in the ‘Alarm’, ‘Warning’ and ‘Acked’ columns for the FD DAQ Dashboard. This information will be useful later when the stable-running-checklist asks you if there are any new alarms or warnings in the DAQ Dashboard. Please use the following example to format your answer: Alarm: 0, Warning: 850 ( DAQ : 652, DCM : 197, Spill: 1), Acked: 0 The Alarm and Acked columns should be empty . If there is a persistent alarm in either dashboard you should contact the DAQ on-call expert straight away. Entries left in the Acked column can suppress further Warnings/Alarms in the same category, you should contact the DAQ on-call expert to clear anything that has been left as acknowledged in the dashboard.",
+          "links": []
+        },
+        {
+          "name": "ND Runs in progress",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "ND run in progress",
+          "help": "Go to the snapshot of ND-CR-01 . Check that the timestamp on the lower right is up-to-date. List the current ND run in progress. Use the format: Run #/Subrun #, e.g. 29127/34",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/nd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "ND dashboard status",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Alarm/warning/ackeds in ND Dashboard",
+          "help": "List the number of entries in the ‘Alarm’, ‘Warning’ and ‘Acked’ columns, for the ND DAQ Dashboard. Please use the following example to format your answer: Alarm: 0, Warning: 53 ( DAQ : 49, DCM : 4), Acked: 0 Remember the Alarm and Acked columns should be empty . If there is a persistent alarm in either dashboard, contact the DAQ on-call expert now.",
+          "links": []
+        },
+        {
+          "name": "Is NuMI beam running ?",
+          "type": "radio",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "html_default": null,
+          "label": "Is NuMI beam running ?",
+          "help": "For the next questions, check the middle left plot at: NuMI plots .",
+          "links": [
+            "https://dbweb-a.fnal.gov:8443/ifbeam/bmon/numimon/Display"
+          ]
+        },
+        {
+          "name": "NuMI beam intensity",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "NuMI beam intensity",
+          "help": "Proton Intensity (E12).",
+          "links": []
+        },
+        {
+          "name": "NuMI beam power",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "NuMI beam power in kW",
+          "help": "Cycle Average Power.",
+          "links": []
+        },
+        {
+          "name": "Is BNB running?",
+          "type": "radio",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "html_default": null,
+          "label": "Is BNB running?",
+          "help": "For the next questions, check the middle left plot at: BNB plots .",
+          "links": [
+            "https://dbweb-a.fnal.gov:8443/ifbeam/bmon/bnbmon/Display"
+          ]
+        },
+        {
+          "name": "BNB beam intensity",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "BNB beam intensity",
+          "help": "Proton Intensity (E12).",
+          "links": []
+        },
+        {
+          "name": "BNB beam power",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "BNB beam power",
+          "help": "Protons Rate/hr.",
+          "links": []
+        },
+        {
+          "name": "comments",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Comments",
+          "help": "Any comments on the state of things as you found them at the start of your shift? Plans for this shift?",
+          "links": []
+        }
+      ],
+      "script": "post_start_shift.py"
+    },
+    "2026_Stable_Running_Checklist": {
+      "category": "General",
+      "tags": [
+        "Run Info"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Stable_Running_Checklist",
+      "observed_entry_id": "257945",
+      "fields": [
+        {
+          "name": "typical_power",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "What is the typical power while beam is up?",
+          "help": "Go to the NuMI status page . From the beam intensity/average power plot estimate the current average power if the beam is up or recently dropped out (<10 minutes). If there has been no beam for more than 10 minutes, put “N/A”.",
+          "links": [
+            "https://dbweb-a.fnal.gov:8443/ifbeam/bmon/numimon/Display"
+          ]
+        },
+        {
+          "name": "fd_run_number",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "FarDet run and subrun",
+          "help": "You can find both of these listed in run control on FarDet VNC -01. Please enter them in the format: Run #/Subrun #. If the run is stopped for an understood reason , please enter N/A instead.",
+          "links": []
+        },
+        {
+          "name": "fd_dashboard_running",
+          "type": "radio",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No - calling expert"
+          ],
+          "html_default": null,
+          "label": "FD Dashboard running and up to date?",
+          "help": "The Dashboard should be clearly visible on FarDet CR-01. If the dashboard is not running contact your DAQ on-call expert . There is a timestamp in the top-right corner of the GUI . If this timestamp is out of date by more than 5 mins, contact your DAQ on-call expert . The ‘Last Update’ timestamp below it is when the last new alarm/message comes in, so it is ok if this one is out of date.",
+          "links": []
+        },
+        {
+          "name": "fd_dashboard_alarms",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "No",
+            "Yes - red/yellow DDS/MsgAnalyzer - calling expert",
+            "Yes - new alarms in the Dashboard - calling expert",
+            "Yes - new warnings in the Dashboard"
+          ],
+          "html_default": [],
+          "label": "Any new alarms or warnings in the Dashboard?",
+          "help": "Check the following: If there are any red boxes at the top, contact your DAQ on-call expert to address the issue. If there are any yellow boxes, email your DAQ on-call expert and CC nova_runcoordinator@fnal.gov. Check the alarm column. If there are new entries contact your DAQ on-call expert . Check the warning column. No action required for new warnings, but pay attention to large bursts of warnings which could indicate a more serious problem.",
+          "links": []
+        },
+        {
+          "name": "fd_rack_temps",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "No; out of date: contacting DAQ on-call and RunCo",
+            "No; network problems: contacting DAQ on-call & RunCo",
+            "No; temperature(s) >90F: contacting DAQ on-call & RunCo",
+            "Yes"
+          ],
+          "html_default": [],
+          "label": "Are the FarDet rack temperatures OK?",
+          "help": "You should check the following: Check the “Last updated at:” timestamp. If this is out of date by more than 5 mins, go to see the rack temperatures at the bottom right of the FD- VNC -01 to see if it is updating. If the timestamp is still out of date contact your DAQ on-call expert and run coordinator. If the GUI is flashing red and blue and warns of a connection problem, contact your DAQ on-call expert and run coordinator. The GUI will also flash red and blue, If any temperature rises above 90 F. If this happens contact your run coordinator and DAQ on-call expert . If all temperatures are OK, but any are above 85 F you should continue to closely monitor their values until the temperature(s) begin to fall.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/fd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "fd_numi_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "0 - no beam",
+            "0.4-0.9 Hz - normal beam",
+            "> 1 Hz calling expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for the FarDet NuMI spill",
+          "help": "This should be between about 0.4-1.0 Hz, depending on beam power/intensity.",
+          "links": []
+        },
+        {
+          "name": "fd_cosmic_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~3.33 Hz",
+            "not ~3.33 Hz - calling expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for the FarDet Cosmic spill",
+          "help": "The nominal rate for cosmics is 3.33 Hz.",
+          "links": []
+        },
+        {
+          "name": "fd_one_hz_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~1 Hz",
+            "not ~1 Hz - calling expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for the FarDet 1Hz trigger",
+          "help": "The nominal rate is 1 Hz.",
+          "links": []
+        },
+        {
+          "name": "fd_ddt_total_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~60-100 Hz",
+            "not 60-100 Hz - calling DAQ expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for DDT: Total trigger",
+          "help": "The acceptable rate for DDT total can change drastically depending on which DDT s are running/firing. You should just check the rate is between 60 and 100 Hz and the number of triggers in the total is advancing. If the rate is outside of that range, please contact your DAQ expert .",
+          "links": []
+        },
+        {
+          "name": "fd_event_display_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No: calling expert because it is not running/frozen/out-of-date",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "FD event display visible and updating?",
+          "help": "The event display should be present at the top-left of FarDet VNC -02. If the event display needs to be started, contact your on-call DAQ expert Check the timestamp of the last event (in the bottom-left corner of the display) is not more than 5 mins out of date, and at the top of the GUI check the event display is set to auto advance (there should be a X to the right of the Next -----> button. Next go to the NOvA live event display website if the FD event display is not updating every 5 seconds contact your DAQ expert.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/shift/live-evd/index.html"
+          ]
+        },
+        {
+          "name": "fd_event_display_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: broken tracks or missing DCMs - calling expert",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": [],
+          "label": "Does the event display look OK?",
+          "help": "Watch the NOvA live event display website for a few events and check that: You don’t see broken tracks All DCM s have hits in them sometimes",
+          "links": [
+            "https://nova-nusoft.fnal.gov/shift/live-evd/index.html"
+          ]
+        },
+        {
+          "name": "fd_onmon_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "Contacting expert because it is frozen or out of date",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "FarDet OnMon visible and updating?",
+          "help": "The OnMon GUI should be present at the bottom-left of FarDet VNC -02. There should be two OnMon GUI s present. The FEBHitRateMap should be shown at the bottom-left of FarDet VNC -02, and AEVsHour should be above that. If either GUI is not running contact your on-call DAQ expert . You can tell if it is updating by checking the timestamp (see the next question).",
+          "links": []
+        },
+        {
+          "name": "fd_onmom_timestamp",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "within 5 mins",
+            "older than 5 mins - calling DAQ expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "What is the value of the OnMon timestamp? ",
+          "help": "Check the timestamp in the top-right corner of the GUI s, enter the value here, and make sure it is NOT more than 5 mins ago (note the timestamp is in UTC ). If either OnMon is frozen or not updating contact your DAQ expert to kill and restart it. The reason for this question is to make sure we have OnMon updating, since sometimes it stops. We used to see the OnMon frozen for 1.5 days without noticing it during checklist shifts, which can be dangerous.",
+          "links": []
+        },
+        {
+          "name": "fd_feb_hit_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: blank DCMs - calling expert",
+            "No: sections with high/low rate - calling expert",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": [],
+          "label": "Does the FEBHitRateMap look OK?",
+          "help": "Go to the FEBHitRateMap plot . Are there any DCM s with no hits? Do the rates look OK? Most FEB s should show a green-yellow colour. If there are DCM s or large portions of the detector showing a rate that is much higher or lower than the rest of the detector, this could indicate a serious problem. Check the time that the plot was last updated, this plot should update every 20 minutes. A timestamp older than this could indicate that the web-plot making scripts aren’t running.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/datacheck/nearline/plots/FarDet-t02-P1FEBRateHitMapDay.png"
+          ]
+        },
+        {
+          "name": "fd_incomplete_events",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "No",
+            "Yes - contacting the DAQ on-call expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Continuous incomplete events for >20 mins?",
+          "help": "Look at the OnMon view displaying the “Number of errors per minute as a function of UTC hour”. If there is an entry under “Incomplete Events” for more than 20 consecutive minutes (each bin is 1 minute), contact your DAQ on-call expert and attach a screenshot of the plot to this form.",
+          "links": []
+        },
+        {
+          "name": "fd_css_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No- contacting an expert to start it"
+          ],
+          "html_default": "[Choose one]",
+          "label": "FarDet CSS GUI updating?",
+          "help": "The CSS GUI should be visible in the top-right corner of FarDet VNC -02, showing the “FarDet Overview” page. If you need to start the GUI contact your DAQ on-call expert . If the GUI is updating the heartbeat circle will change color every time the snapshot server updates. Please watch the snapshot image for a minute to ensure the color is changing. If is is not the GUI may be frozen or not updating. Please contact the expert on-call.",
+          "links": []
+        },
+        {
+          "name": "fd_detector_cooled",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No: one or more DCMs warm (dark green): calling expert",
+            "No: DCMs red or other non-green state: calling expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Is the FarDet cooled?",
+          "help": "All DCM s should show a light green color if the detector is cooled. If one or more DCM s are consistently in the alarm (red) state, or any other (non-green) state, you should contact the expert on-call .",
+          "links": []
+        },
+        {
+          "name": "nd_run_number",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "NearDet run and subrun",
+          "help": "You can find both of these listed in run control on NearDet VNC -01. Please enter them in the format: Run #/Subrun # If the run is stopped for an understood reason , please enter N/A instead.",
+          "links": []
+        },
+        {
+          "name": "nd_dashboard_running",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "Contacting the expert because it is frozen or out of date",
+            "No: contacting the expert to start it",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "ND Dashboard running, timestamp < 20 mins ago?",
+          "help": "The Dashboard should be visible on NearDet VNC -01. If it is not running contact your DAQ on-call expert . There is a timestamp in the top-right corner of the GUI . If this timestamp is out of date by more than 5 mins you should contact your DAQ on-call expert address this issue. The ‘Last Update’ timestamp below it is when the last new alarm/message comes in, so it is ok if this one is out of date.",
+          "links": []
+        },
+        {
+          "name": "nd_dashboard_alarms",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "No",
+            "Yes - red/yellow DDS/MsgAnalyzer status indicators",
+            "Yes - new alarms in the Dashboard - calling expert",
+            "Yes - new warnings in the Dashboard"
+          ],
+          "html_default": [],
+          "label": "Any new alarms or warnings in the Dashboard?",
+          "help": "Check the following: If any boxes are red, call your DAQ on-call expert . If any boxes are yellow, email your DAQ on-call expert and CC nova_runcoordinator@fnal.gov. Check the alarm column. If there are new entries call your DAQ on-call expert . Check the warning column. No action required for new warnings, but pay attention to large bursts of warnings which could indicate a more serious problem.",
+          "links": []
+        },
+        {
+          "name": "nd_numi_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "0 - no beam",
+            "0.4-0.9 Hz ok",
+            "> 1 Hz calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for NearDet NuMI spill",
+          "help": "This should be between about 0.4-0.8 Hz, depending on beam power/intensity.",
+          "links": []
+        },
+        {
+          "name": "nd_booster_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "0 - no beam",
+            "4-6 Hz ok",
+            "> 6 Hz calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for NearDet Booster spill",
+          "help": "This should be between about 4-6 Hz, depending on beam power/intensity. If the BNB beam is down you can enter N/A.",
+          "links": []
+        },
+        {
+          "name": "nd_one_hz_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~1 Hz",
+            "not ~1 Hz - calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for the NearDet 1Hz trigger",
+          "help": "The nominal rate is 1 Hz.",
+          "links": []
+        },
+        {
+          "name": "nd_cosmic_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~1 Hz",
+            "not ~1 Hz - calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for the NearDet Cosmic spill",
+          "help": "The nominal rate for cosmics is 1 Hz.",
+          "links": []
+        },
+        {
+          "name": "nd_ddt_total_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "~25-40 Hz",
+            "not ~25-40 Hz - calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Average rate for DDT: Total trigger",
+          "help": "You should just check the rate is between 25 and 40 Hz and the number of triggers in the total is advancing. If the rate is outside of that range, please contact your DAQ expert .",
+          "links": []
+        },
+        {
+          "name": "nd_numi_event_display",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No: contacting expert because it is frozen or out of date",
+            "No: but there is no beam",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "ND NuMI event display updating?",
+          "help": "The event display should be present at the top-left of NearDet VNC -02 (upper plot). If the event display needs to be started, contact your on-call DAQ expert. The event display will not update if there are no new events, so if the beam is down the display may look like it is not updating/frozen until beam returns. If beam is down you do not need to call a DAQ expert. Instead check the AD Elog or call the MCR for details. Check the timestamp of the last event (in the bottom-left corner of the display) is not more than 5 mins out of date, and at the top of the GUI check the event display is set to auto advance (there should be a X to the right of the Next ——-> button. Next go to the NOvA live event displays website . If the ND NuMI event display is not updating every 5 seconds contact your DAQ expert.",
+          "links": [
+            "https://www-bd.fnal.gov/Elog",
+            "https://nova-nusoft.fnal.gov/shift/live-evd/index.html"
+          ]
+        },
+        {
+          "name": "nd_numi_event_display_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No - broken tracks",
+            "No - missing DCMs",
+            "No - but there is no beam",
+            "Run stopped for expert activity"
+          ],
+          "html_default": [],
+          "label": "Does the NuMI event display look OK?",
+          "help": "Watch the event display for a few events and check that: You don’t see broken tracks All DCM s sometimes have hits in them",
+          "links": []
+        },
+        {
+          "name": "nd_all_triggers_event_display_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "Contacting expert because it is frozen or out of date",
+            "No - starting it now",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "ND all-triggers event display updating?",
+          "help": "The event display should be present at the top-left of NearDet VNC -02 (lower plot). If the event display needs to be started, contact your on-call DAQ expert . Check the timestamp of the last event (in the bottom-left corner of the display) is not more than 5 mins out of date, and at the top of the GUI check the event display is set to auto advance (there should be a X to the right of the Next ——-> button. Next go to the NOvA live event displays website . If the ND all triggers event display is not updating every 5 seconds contact your DAQ expert .",
+          "links": [
+            "https://nova-nusoft.fnal.gov/shift/live-evd/index.html"
+          ]
+        },
+        {
+          "name": "nd_all_triggers_event_display_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No - broken tracks",
+            "No - missing DCMs",
+            "Run stopped for expert activity"
+          ],
+          "html_default": [],
+          "label": "Does the all triggers event display look OK?",
+          "help": "Watch the event display for a few events and check that: You don’t see broken tracks You don’t consistently see no hits in a DCM",
+          "links": []
+        },
+        {
+          "name": "nd_onmon_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No: Contacting expert because it is frozen or out of date",
+            "No: contacting an expert to start it now",
+            "No: run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "NearDet OnMon visible and updating?",
+          "help": "There should be two OnMon GUI s present. The FEBHitRateMap should be shown at the bottom-left of NearDet VNC -02, and AEVsHour should be to the right of that. If either GUI is not running contact your on-call DAQ expert . You can tell if it is updating by checking the timestamp (see the next question).",
+          "links": []
+        },
+        {
+          "name": "nd_onmon_timestamp",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "within 5 mins ok",
+            "older than 5 mins - calling DAQ expert"
+          ],
+          "html_default": "[Choose one]",
+          "label": "What is the value of the OnMon timestamp?",
+          "help": "Check the timestamp in the top-right corner of the GUI s (note the timestamp is in UTC ). If either OnMon is frozen or not updating contact your DAQ expert to restart it.",
+          "links": []
+        },
+        {
+          "name": "nd_feb_hit_rate",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No - blank DCMs",
+            "No - sections with high/low rate",
+            "Run stopped for expert activity"
+          ],
+          "html_default": [],
+          "label": "Does the FEBHitRateMap look OK?",
+          "help": "Please check the event displays at the FEBHitRateMap plot . Are there any DCM s with no hits? Do the rates look OK? Most FEB s should show a green-yellow colour. If there are DCM s or large portions of the detector showing a rate that is much higher or lower than the rest of the detector, this could indicate a serious problem. Check the time that the plot was last updated, this plot should update every 20 minutes. A timestamp older than this could indicate that the web-plot making scripts aren’t running.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/datacheck/nearline/plots/NearDet-Act-P1FEBRateHitMapDay.png"
+          ]
+        },
+        {
+          "name": "nd_timing_peak",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No but no beam",
+            "no -calling expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "Yes",
+          "label": "ND timing peak visible and between the lines?",
+          "help": "Go to the TimingALLVsHour plot . Check the ND timing peak observable (cyan/green color) and it is in between the dotted white lines?",
+          "links": [
+            "https://nova-nusoft.fnal.gov/datacheck/nearline/plots/NearDet-t00-P1TPlotZOOMVsTimeDay.png"
+          ]
+        },
+        {
+          "name": "nd_incomplete_events",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "No",
+            "Yes - contacting the DAQ on-call expert",
+            "Run stopped for expert activity"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Continuous incomplete events for >20 mins?",
+          "help": "Look at the OnMon view displaying the “Number of errors per minute as a function of UTC hour”. If there is an entry under “Incomplete Events” for more than 20 consecutive minutes (each bin is 1 minute), contact your DAQ on-call expert and attach a screenshot of the plot to this form.",
+          "links": []
+        },
+        {
+          "name": "nd_css_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No: Contacting expert because it is frozen or out of date",
+            "No: Contacting expert to start it"
+          ],
+          "html_default": "[Choose one]",
+          "label": "NearDet CSS GUI updating?",
+          "help": "The CSS GUI should be visible in the top-right corner of NearDet VNC -02, showing the “NearDet Overview” page. If it needs to be started, contact your DAQ on-call expert . If the GUI is updating the heartbeat circle will change color every time the snapshot server updates. Please watch the snapshot image for a minute to ensure the color is changing. If the color is not changing it could indicate it is frozen or not updating. If the GUI is frozen or not updating contact a DCS expert listed on the Blue Expert Sheet.",
+          "links": []
+        },
+        {
+          "name": "nd_detector_cooled",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "No - one or more DCMs warm (dark green)",
+            "No - DCMs red or other non-green state"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Is the NearDet cooled?",
+          "help": "All DCM s should show a light green color if the detector is cooled. If one or more DCM s are consistently in the alarm (red) state, or any other (non-green) state, contact the on-call expert .",
+          "links": []
+        },
+        {
+          "name": "nearline_open",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "[Choose one]",
+            "Yes",
+            "One or more plots are out of date",
+            "One or more plots are largely blank",
+            "No - opening it now"
+          ],
+          "html_default": "[Choose one]",
+          "label": "Nearline front page visible and up to date?",
+          "help": "You should check the “Last updated on:” timestamp is no older than 20 mins. A timestamp older than this could indicate that the web-plot making scripts aren’t running. The plots are populated from the right as sub-runs finish, so for the near detector, it may take up to 1.5 hours for new data to appear. However, if a large section of the plot is blank and the detector is up with a run going, then this is an indication that the nearline processing has stopped. If either of these is true you should contact a Nearline Software expert .",
+          "links": []
+        },
+        {
+          "name": "fd_nearline_features",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Normal",
+            "No new features",
+            "Gaps",
+            "Drops",
+            "Instabilities",
+            "One Good Run failure mode",
+            "Multiple Good Run failure modes",
+            "Other"
+          ],
+          "html_default": [],
+          "label": "What features are visible in the FD plots?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "nd_nearline_features",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Normal",
+            "No new features",
+            "Gaps",
+            "Drops",
+            "Instabilities",
+            "One Good Run failure mode",
+            "Multiple Good Run failure modes",
+            "Other"
+          ],
+          "html_default": [],
+          "label": "What features are visible in the ND plots?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "nearline_details",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Provide additional details",
+          "help": "Use this box to describe, for both detectors: The features in more detail. Any action taken. Use the notation: ( NOT ) RESOLVED – description of feature including times – action taken . e.g. RESOLVED – FEB Hit rate drop – 14:00 to 15:30 – DCM sync issues identified for that period. NOT RESOLVED – Gap – 20:00 to 23:00 – contacted expert. Think about the features you see in the context of current running conditions, beam/detector downtimes, etc. Are they consistent? If there are features you do not understand follow the wiki links on the Nearline front page learn more about interpreting these plots and when you should contact an expert.",
+          "links": []
+        },
+        {
+          "name": "vnc_02s_attached",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Near and Far VNC-02 images attached?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "additional_info",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Additional information",
+          "help": "Use this box to provide further information on your interpretation of the event displays, OnMon plots and Nearline front page plots. You can attach additional plots/screenshot to refer to.",
+          "links": []
+        }
+      ],
+      "script": "post_stable_running_checklist.py"
+    },
+    "2026_Control-Room_Checklist": {
+      "category": "General",
+      "tags": [
+        "Control Room",
+        "General"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Control-Room_Checklist",
+      "observed_entry_id": "257946",
+      "fields": [
+        {
+          "name": "cr01_time",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Within 5 minutes",
+            "Older than 5 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Last update time of FD-01 desktop?",
+          "help": "Make sure the timestamp in lower-right corner is up to date (no older than 5 mins).",
+          "links": []
+        },
+        {
+          "name": "cr01_windows_present",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the DAQ expert now",
+            "No: run stopped for expert work"
+          ],
+          "html_default": [],
+          "label": "Are all FD-01 windows present?",
+          "help": "If not at a ROC , go to the snapshot of FD- VNC -01 . Are all windows present that should be? If something is missing, there will be a blank space on the background with text that says “ X should be here.” Please call the DAQ expert.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/fd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "cr01_rack_temps",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling DAQ expert & RunCo now"
+          ],
+          "html_default": [],
+          "label": "Rack Temps OK?",
+          "help": "Check that the monitoring page is up to date and is not in alarm. If there are any alarms, call the DAQ expert and the run coordinator immediately. You can also see the rack temperatures at the bottom right of the FD- VNC -01 in your own browser.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/fd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "cr01_tcr_page_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the DAQ expert now"
+          ],
+          "html_default": [],
+          "label": "TCR page okay?",
+          "help": "Check that the timing status page is visible towards the bottom right and that the status is “Running” and “Synchronized”. If not, call the timing expert.",
+          "links": []
+        },
+        {
+          "name": "cr01_spill_server_green",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling DAQ expert now",
+            "No: but there is ongoing expert work"
+          ],
+          "html_default": [],
+          "label": "Spill Server GUI green?",
+          "help": "Are all boxes in the Spill server GUI green? If not, call the DAQ expert.",
+          "links": []
+        },
+        {
+          "name": "cr02_time",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Within 5 mins",
+            "Older than 5 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Last update time of FD-02 desktop?",
+          "help": "Make sure the timestamp in the lower-right corner is up to date (no older than 5 mins).",
+          "links": []
+        },
+        {
+          "name": "cr02_windows_present",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling an expert now",
+            "No: run stopped for expert work"
+          ],
+          "html_default": [],
+          "label": "Are all FD-VNC-02 windows present?",
+          "help": "If not at a ROC , go to the snapshot of FD- VNC -02 . Check that the timestamp on the lower right is up-to-date. Are all windows present that should be? If not, call the expert. On this screen there should be the Far Detector: Event Display, CSS GUI , two copies of OnMon, the DiskWatcher terminal, and a webpage showing four Nearline plots.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/fd-vnc-02.png"
+          ]
+        },
+        {
+          "name": "cr02_diskwatcher_heartbeat",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Ok: within last two hours",
+            ">2 hours: calling expert"
+          ],
+          "html_default": [],
+          "label": "DiskWatcher Heartbeat",
+          "help": "What is the time stamp from the last disk-watcher heartbeat in the console in the center right? If this time stamp is more than 2 hours old, call the DAQ expert.",
+          "links": []
+        },
+        {
+          "name": "cr02_loadshed_check",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Ok: with last 5 mins",
+            "More than 5 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Loadshed Check",
+          "help": "In the most recent LoadshedCheck message in the DiskWatcher terminal window, how many seconds has it been since the Loadshed last updated? The Loadshed should update once every five minutes, so if this number is more than 300 seconds, contact the DAQ on-call and inform them the Loadshed is not updating.",
+          "links": []
+        },
+        {
+          "name": "cr03_time",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Within 5 mins",
+            "Older than 5 mins  - calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Last update time of synoptic desktop?",
+          "help": "Make sure the timestamp in the lower-right corner is up to date (no older than 5 mins).",
+          "links": []
+        },
+        {
+          "name": "cr03_windows_present",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the expert now",
+            "No: run stopped for expert work"
+          ],
+          "html_default": [],
+          "label": "Are all synoptic windows present?",
+          "help": "If not at a ROC , go to the snapshot of synoptic displays . Check that the timestamp on the lower right is up-to-date. Are all windows present that should be? On this screen there should be 10 GUI s.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/synoptic.png"
+          ]
+        },
+        {
+          "name": "cr03_timestamps",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the expert now"
+          ],
+          "html_default": [],
+          "label": "Time stamps okay?",
+          "help": "Are the time stamps in the upper right corner of all 10 GUI windows present and up to date?",
+          "links": []
+        },
+        {
+          "name": "cr03_all_green",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling on-call expert now",
+            "No: but there is ongoing expert work"
+          ],
+          "html_default": [],
+          "label": "All boxes green?",
+          "help": "Short interrupts (< 30 seconds) can happen, so if you see purple or red boxes in a snapshot, refresh the to see if it goes away.",
+          "links": []
+        },
+        {
+          "name": "cr03_dewpoint_nd",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling DCS expert."
+          ],
+          "html_default": [],
+          "label": "Are all dew points under threshold (13 C) for ND ?",
+          "help": "Look at the upper left window (NOvA Near Detector Rack and Environmental Details). Are all the boxes labeled “DP” under 13 C? If not, call the DCS expert listed in the blue sheet.",
+          "links": []
+        },
+        {
+          "name": "cr03_dewpoint_fd",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling DCS expert."
+          ],
+          "html_default": [],
+          "label": "Are all dew points under threshold (55 F)  for FD?",
+          "help": "Look at the bottom left window (NOvA Far Detector Environmental Details). Are all the boxes under the “Dew point” column under 55 F ? If not, call the DCS expert listed in the blue sheet.",
+          "links": []
+        },
+        {
+          "name": "cr04_cameras_updating",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes - all",
+            "Some are and some aren't",
+            "No - none"
+          ],
+          "html_default": [],
+          "label": "Are the cameras updating?",
+          "help": "Go to the FD camera web page and the ND camera web page . If they are not visible or not, please note it in the log (here and in the shift summary), but do not wake up DAQ experts. Note that the web pages in the screenshots only reload every hour, so please use the links above.",
+          "links": [
+            "https://mod.fnal.gov/mod/w1/Live/NOvAWebCams.htm",
+            "https://mod.fnal.gov/mod/w1/Live/novanearcams.htm"
+          ]
+        },
+        {
+          "name": "cr05_time",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Within 5 mins",
+            "Older than 5 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Last update time of ND-01 desktop?",
+          "help": "Make sure the timestamp in the lower-right corner is up to date (no older than 5 mins).",
+          "links": []
+        },
+        {
+          "name": "cr05_windows_present",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the expert now",
+            "No: run stopped for expert work"
+          ],
+          "html_default": [],
+          "label": "Are all ND-01 windows present?",
+          "help": "Go to the snapshot of ND- VNC -01 . Check that the timestamp on the lower right is up-to-date. Are all windows present that should be? On this screen there should be 8 GUI s and 1 webpage.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/nd-vnc-01.png"
+          ]
+        },
+        {
+          "name": "cr05_tcr_page_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the timing expert now",
+            "No – experts aware so no action taken"
+          ],
+          "html_default": [],
+          "label": "TCR page okay?",
+          "help": "Check that the timing status page is visible in the bottom right corner and that the status is “Running” and “Synchronized”. If not, call the timing expert.",
+          "links": []
+        },
+        {
+          "name": "sn_gui_ok",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: taking action",
+            "No: experts aware so no action taken"
+          ],
+          "html_default": [],
+          "label": "Pre-supernova GUI okay?",
+          "help": "If it is showing purple, orange or red, follow the instructions in the window.",
+          "links": []
+        },
+        {
+          "name": "cr05_spill_server_all_green",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the expert now",
+            "No: but there is ongoing expert work"
+          ],
+          "html_default": [],
+          "label": "Spill server all green?",
+          "help": "Are all boxes in the Spill server GUI green? If not, call the DAQ expert.",
+          "links": []
+        },
+        {
+          "name": "cr06_time",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Within 5 minutes",
+            "Older than 5 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Last update time of ND-02 desktop?",
+          "help": "Make sure the timestamp in the lower-right corner is up to date (no older than 5 mins).",
+          "links": []
+        },
+        {
+          "name": "cr06_windows _present",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: calling the expert now",
+            "No: run stopped for expert work"
+          ],
+          "html_default": [],
+          "label": "Are all ND-02 windows present?",
+          "help": "Go to the snapshot of ND- VNC -02 . Check that the timestamp on the lower right is up-to-date. Are all windows present that should be? On this screen there should be 4 GUI s, 1 terminal, and 1 webpage. During beam shutdown, the beam event display is disabled, so there will be one fewer GUI and terminal.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/screenshots/nd-vnc-02.png"
+          ]
+        },
+        {
+          "name": "cr06_diskwatcher_heartbeat",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Ok: within 25 mins",
+            "Older than 25 mins: calling DAQ expert"
+          ],
+          "html_default": [],
+          "label": "Disk watcher heartbeat",
+          "help": "What is the time stamp from the last disk-watcher heartbeat in the console on the center right? If this time stamp is more than 25 minutes old, call the DAQ expert.",
+          "links": []
+        },
+        {
+          "name": "screenshots",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Attach screenshots",
+          "help": "Please add screenshots of all 6 desktops.",
+          "links": []
+        },
+        {
+          "name": "additional_info",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Additional information",
+          "help": "Use this for general comments and to provide further details of anything you found that may suggest a problem.",
+          "links": []
+        }
+      ],
+      "script": "post_control_room_checklist.py"
+    },
+    "2026_Shift-check-in": {
+      "category": "General",
+      "tags": [
+        "Control Room",
+        "General"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Shift-check-in",
+      "observed_entry_id": "257935",
+      "fields": [
+        {
+          "name": "Shift",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Day",
+            "Swing",
+            "Night"
+          ],
+          "html_default": [],
+          "label": "Shift",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "Shifter Name",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Shifter Name",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "Shadow Shifter Name",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Shadow Shifter Name",
+          "help": "If no shadow shifter, leave blank. A guide to shadow shifting can be found here.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/shift/shadow/"
+          ]
+        },
+        {
+          "name": "Call MCR",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Call MCR",
+          "help": "Call MCR at +1 (630) 840-3721 and identify yourself as the NOvA shifter. Give them your name, contact number of your ROC or institution, and the name of your institution. If you are calling from a ROC , please let them know that.",
+          "links": []
+        },
+        {
+          "name": "Zoom",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes",
+            "No: but I'm doing it right now"
+          ],
+          "html_default": [],
+          "label": "Have you met with the previous shifter on Zoom?",
+          "help": "Meet with previous shifter on Zoom to learn anything important that happened during their shift and the current status of the detectors. Join from PC, Mac, Linux, iOS or Android: https://fnal.zoom.us/j/93471617807 (the password can be found at docDB 48803 )",
+          "links": [
+            "https://fnal.zoom.us/j/93471617807",
+            "https://nova-docdb.fnal.gov/cgi-bin/sso/ShowDocument?docid=48803"
+          ]
+        },
+        {
+          "name": "City of current location",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "City of current location? ",
+          "help": "Give city of current location. Do not include your address.",
+          "links": []
+        },
+        {
+          "name": "Equipment for shift",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Describe the equipment being used for your shift?",
+          "help": "If you are at a ROC , give the name of your ROC . Otherwise, give outline of equipment used (version numbers not needed). Example: mac laptop and chrome.",
+          "links": []
+        },
+        {
+          "name": "General comments",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "General comments",
+          "help": "Any general comments?",
+          "links": []
+        }
+      ],
+      "script": "post_shift_check_in.py"
+    },
+    "2025_Expert-contact": {
+      "category": "General",
+      "tags": [
+        "Expert"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2025_Expert-contact",
+      "observed_entry_id": "257944",
+      "fields": [
+        {
+          "name": "Problem",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "What is the problem?",
+          "help": "Include ECL entry numbers if appropriate. Attach a screenshot showing the problem, if possible.",
+          "links": []
+        },
+        {
+          "name": "Expert",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Who is the expert being contacted?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "Type of contact",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Phone",
+            "Slack",
+            "E-mail",
+            "Other"
+          ],
+          "html_default": [],
+          "label": "How are you trying to contact them?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "Response",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Yes: they're addressing the problem",
+            "Yes: they told me to contact someone else",
+            "No -- I left them information (text or voicemail)",
+            "No -- I didn't leave them information"
+          ],
+          "html_default": [],
+          "label": "Did you get in contact?",
+          "help": "",
+          "links": []
+        },
+        {
+          "name": "FD DAQ downtime",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Don't know",
+            "No",
+            "Yes; but it will be resolved within 30 mins",
+            "Yes; FD may be down for >30 minutes - calling RunCo"
+          ],
+          "html_default": [],
+          "label": "Is this a FD problem during NuMI running?",
+          "help": "If the Far Detector is expected to be down for more than 30 minutes, and NuMI beam is running, call the RunCo . Their contact information is on the Bulletin Board .",
+          "links": [
+            "https://cdcvs.fnal.gov/redmine/projects/novaoperations/wiki/ShiftBulletinBoard"
+          ]
+        }
+      ],
+      "script": "post_expert_contact.py"
+    },
+    "2026_Shift-check-out": {
+      "category": "General",
+      "tags": [
+        "Control Room"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Shift-check-out",
+      "observed_entry_id": "257934",
+      "fields": [
+        {
+          "name": "Next Shifter",
+          "type": "radio",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No - calling the RunCo"
+          ],
+          "html_default": null,
+          "label": "Next Shifter",
+          "help": "Is the next shifter present? If not and it is 30 minutes past the start of the next shift, please call the run coordinator.",
+          "links": []
+        },
+        {
+          "name": "Info Transfer",
+          "type": "radio",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "Yes",
+            "No - but I will..."
+          ],
+          "html_default": null,
+          "label": "Info Transfer",
+          "help": "Have you informed the next shifter of the current running conditions and/or any known issue that occurred during your shift?",
+          "links": []
+        },
+        {
+          "name": "Final Comments",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Final Comments",
+          "help": "",
+          "links": []
+        }
+      ],
+      "script": "post_shift_check_out.py"
+    },
+    "2026_Shift-summary": {
+      "category": "General",
+      "tags": [
+        "Control Room",
+        "General"
+      ],
+      "source": "https://dbweb1.fnal.gov:8443/ECL/nova/E/create_entry?f=2026_Shift-summary",
+      "observed_entry_id": "257933",
+      "fields": [
+        {
+          "name": "Shift summary",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Shift summary",
+          "help": "List any major incidents that occurred during your shift (crashes, DAQ work, ongoing issues, etc.)",
+          "links": []
+        },
+        {
+          "name": "FD run summary",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "FD run summary",
+          "help": "List the FD runs that completed during your shift. Please point out if any of these runs should be excluded from good data. For example, if the detector was running warm, or if it was being run with some kind of test configuration. Most data that is truly bad will be marked as such by our data quality criteria. But in the case of known bad runs (runs taking for testing purposes for example) it is better to make sure they are still marked as bad.",
+          "links": []
+        },
+        {
+          "name": "ND run summary",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "ND run summary",
+          "help": "List the ND runs that completed during your shift, with the same detail as for the FD.",
+          "links": []
+        },
+        {
+          "name": "Fraction of good beam",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Fraction of good beam",
+          "help": "Go to Good Beam Fraction plot . Record the average fraction of good beam over the last 24 hours (the number in the top right corner.) This number should be above 0.7 and ensures that our spills are passing our beam quality cuts. If it is below 0.7 for multiple subruns, and beam has been running normally, please e-mail nova_runcoordinator@fnal.gov and nova_dataquality@fnal.gov. During beam shutdown, please enter N/A instead.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/datacheck/nearline/plots/NearDet-t00-P1nGoodBeamperSRDay.png"
+          ]
+        },
+        {
+          "name": "Bad spills",
+          "type": "text",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Bad spills",
+          "help": "Go to the Bad Spills plot This plot shows only the “bad” spills over the past 24 hours (keep in mind that there are ~66,000 spills during this time.) List the category from the horizontal axis with the most entries (obviously skipping “total bad spills”). If this category is anything other than “ POT ”, and there have been no known non-standard beam conditions that would cause a different failure (such as target scans) e-mail nova_runcoordinator@fnal.gov and nova_dataquality@fnal.gov. During beam shutdown, please enter N/A instead.",
+          "links": [
+            "https://nova-nusoft.fnal.gov/datacheck/nearline/plots/NearDet-t00-P1BadSpillsDay.png"
+          ]
+        },
+        {
+          "name": "Nearline plots",
+          "type": "checkbox",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": false,
+          "label": "Nearline plots",
+          "help": "Please attach all 8 plots (4 for each detector) from the nearline front-page, and check that each plot is up to date.",
+          "links": []
+        },
+        {
+          "name": "Comments",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Comments",
+          "help": "Any further comments or comments about features in the nearline plots?",
+          "links": []
+        },
+        {
+          "name": "MuonMonitorTime",
+          "type": "select",
+          "html_required": false,
+          "multiple": false,
+          "choices": [
+            "(Choose one)",
+            "Yes",
+            "No",
+            "No - but there is no beam"
+          ],
+          "html_default": "(Choose one)",
+          "label": "Muon monitor plots up to date?",
+          "help": "Check the last refreshed time stamp reported for each plot. If this time stamp occurred within the last 8 hours, the plots are considered up to date. If the plots are not up to date please email nova_runcoordinator@fnal.gov and mm_expert@listserv.fnal.gov",
+          "links": []
+        },
+        {
+          "name": "MuonMonitorStatus",
+          "type": "select",
+          "html_required": false,
+          "multiple": true,
+          "choices": [
+            "Good",
+            "Mean Centroid Status - Bad",
+            "Gain Status - Bad",
+            "Horn 1 Status - Bad",
+            "Beam off"
+          ],
+          "html_default": [],
+          "label": "What is their status?",
+          "help": "All plots are labeled with the status of the data as “Status: Good” or “Status: Not Good”, by checking if the data goes beyond the boundary drawn on the plots. Check that status of each plot. If any plot status is bad please email nova_runcoordinator@fnal.gov and mm_expert@listserv.fnal.gov",
+          "links": []
+        },
+        {
+          "name": "MuonMonitorComment",
+          "type": "textarea",
+          "html_required": false,
+          "multiple": false,
+          "choices": [],
+          "html_default": "",
+          "label": "Comments",
+          "help": "Any comments about the features in the muon monitor plots? Are there any gaps or features not associated with beam down time or the recovery of the beam? If there are please email nova_runcoordinator@fnal.gov and mm_expert@listserv.fnal.gov",
+          "links": []
+        }
+      ],
+      "script": "post_shift_summary.py"
+    }
+  }
+}

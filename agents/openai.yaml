@@ -1,0 +1,4 @@
+interface:
+  display_name: "NOvA ECL"
+  short_description: "Post NOvA ECL entries and fill predefined forms"
+  default_prompt: "Use $nova-ecl to prepare and post a NOvA ECL entry using the appropriate predefined form."

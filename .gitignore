@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ecl-receipts/
+*.receipt.json
+*.cookies
+.env
+.env.*
+ecl_access*.txt
+ecl_access*.json
+/drafts/
+/output/

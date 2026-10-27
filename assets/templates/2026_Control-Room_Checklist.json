@@ -1,0 +1,39 @@
+{
+  "form": "2026_Control-Room_Checklist",
+  "category": "General",
+  "subject": null,
+  "tags": [
+    "Control Room",
+    "General"
+  ],
+  "fields": {
+    "cr01_time": null,
+    "cr01_windows_present": null,
+    "cr01_rack_temps": null,
+    "cr01_tcr_page_ok": null,
+    "cr01_spill_server_green": null,
+    "cr02_time": null,
+    "cr02_windows_present": null,
+    "cr02_diskwatcher_heartbeat": null,
+    "cr02_loadshed_check": null,
+    "cr03_time": null,
+    "cr03_windows_present": null,
+    "cr03_timestamps": null,
+    "cr03_all_green": null,
+    "cr03_dewpoint_nd": null,
+    "cr03_dewpoint_fd": null,
+    "cr04_cameras_updating": null,
+    "cr05_time": null,
+    "cr05_windows_present": null,
+    "cr05_tcr_page_ok": null,
+    "sn_gui_ok": null,
+    "cr05_spill_server_all_green": null,
+    "cr06_time": null,
+    "cr06_windows _present": null,
+    "cr06_diskwatcher_heartbeat": null,
+    "screenshots": null,
+    "additional_info": null
+  },
+  "images": [],
+  "attachments": []
+}

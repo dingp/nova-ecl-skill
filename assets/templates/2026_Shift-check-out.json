@@ -1,0 +1,15 @@
+{
+  "form": "2026_Shift-check-out",
+  "category": "General",
+  "subject": null,
+  "tags": [
+    "Control Room"
+  ],
+  "fields": {
+    "Next Shifter": null,
+    "Info Transfer": null,
+    "Final Comments": null
+  },
+  "images": [],
+  "attachments": []
+}

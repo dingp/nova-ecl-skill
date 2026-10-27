@@ -1,0 +1,23 @@
+{
+  "form": "2026_Shift-summary",
+  "category": "General",
+  "subject": null,
+  "tags": [
+    "Control Room",
+    "General"
+  ],
+  "fields": {
+    "Shift summary": null,
+    "FD run summary": null,
+    "ND run summary": null,
+    "Fraction of good beam": null,
+    "Bad spills": null,
+    "Nearline plots": null,
+    "Comments": null,
+    "MuonMonitorTime": null,
+    "MuonMonitorStatus": null,
+    "MuonMonitorComment": null
+  },
+  "images": [],
+  "attachments": []
+}
