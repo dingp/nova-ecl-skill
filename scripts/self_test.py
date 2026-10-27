@@ -116,6 +116,28 @@ class SkillTests(unittest.TestCase):
         self.assertTrue(receipt["verification"]["verified"])
         self.assertEqual(receipt["entry_id"], 42)
 
+    def test_custom_tags_cannot_remove_attribution(self):
+        schema = {"fields": [{"name": "text", "type": "textarea", "multiple": False, "choices": []}]}
+        for tags in ([], ["Custom"], ["Custom", "ai-agent", "ai-agent"]):
+            entry = build_entry("default", schema,
+                {"subject": "Draft", "tags": tags, "fields": {"text": "Draft"}}, USERNAME, self.folder)
+            actual = [tag.get("name") for tag in ET.fromstring(entry.xshow()).findall("tag")]
+            self.assertEqual(actual.count("ai-agent"), 1)
+            self.assertTrue(set(tags) <= set(actual))
+
+    def test_raw_xml_posts_receive_attribution(self):
+        raw = '<entry category="General"><form name="default"><field name="text">Raw draft</field></form></entry>'
+        self.assertEqual(self.client.post_xml(raw)[0], 200)
+        tags = [tag.get("name") for tag in ET.fromstring(self.server.state["xml"]).findall("tag")]
+        self.assertEqual(tags, ["ai-agent"])
+
+    def test_generated_template_includes_attribution(self):
+        output = self.folder / "template.json"
+        result = subprocess.run([sys.executable, str(SKILL_ROOT / "scripts/post_entry.py"),
+            "--write-template", str(output)], capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(output.read_text())["tags"], ["ai-agent"])
+
     def test_binary_attachments_survive(self):
         data = bytes(range(256))
         self.entry.addImage("screenshot", "picture.png", image=data)
@@ -172,6 +194,7 @@ class SkillTests(unittest.TestCase):
             template = json.loads((SKILL_ROOT / "assets/templates" / (name + ".json")).read_text())
             self.assertEqual(set(template["fields"]), {f["name"] for f in schema["fields"]})
             self.assertTrue(all(value is None for value in template["fields"].values()))
+            self.assertIn("ai-agent", template["tags"])
             template["subject"] = "Offline form validation"
             for field in schema["fields"]:
                 choices = [v for v in field["choices"] if v not in ("[Choose one]", "(Choose one)")]
@@ -184,6 +207,7 @@ class SkillTests(unittest.TestCase):
                                     cwd=self.folder, capture_output=True, text=True)
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(ET.parse(output).find("form").get("name"), name)
+            self.assertEqual(sum(tag.get("name") == "ai-agent" for tag in ET.parse(output).findall("tag")), 1)
         self.assertFalse((self.folder / ".ecl-receipts").exists())
 
     def test_invalid_choice_typo_and_ambiguous_list_rejected(self):

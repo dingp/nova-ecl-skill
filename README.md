@@ -7,6 +7,11 @@ editable templates for seven predefined forms.
 Default logbook: <https://dbweb1.fnal.gov:8443/ECL/nova>.
 The API username is read from your credential file or explicit configuration.
 
+Every entry posted through this skill includes the `ai-agent` tag. The client
+adds it automatically alongside the form's or caller's other tags, including
+when a custom tag list is supplied. Drafts and generated templates include it
+too, and read-back checks verify it.
+
 ## Setup
 
 The scripts use the Python standard library and were tested with Python 3.9.
@@ -160,9 +165,10 @@ Run the offline checks:
 python3 scripts/self_test.py
 ```
 
-The 15 tests use a local HTTP stub to check signatures, drafts for all seven
+The 18 tests use a local HTTP stub to check signatures, drafts for all seven
 forms, binary attachments, receipts, failed verification recovery, and malformed
-responses. They do not contact Fermilab or create live logbook entries.
+responses, plus mandatory tagging for custom tags and raw XML. They do not
+contact Fermilab or create live logbook entries.
 
 [SKILL.md](SKILL.md) is the Codex entrypoint. The active client is
 [scripts/ECLAPI.py](scripts/ECLAPI.py); the supplied Python 2 original is

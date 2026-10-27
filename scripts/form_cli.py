@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
-from ECLAPI import ECLAPIException, ECLConnection, ECLEntry, created_entry_id
+from ECLAPI import ECLAPIException, ECLConnection, ECLEntry, created_entry_id, entry_tags
 from ecl_config import SKILL_ROOT, credentials, ecl_url
 
 
@@ -219,7 +219,7 @@ def main(form="default"):
             return
         if args.write_template:
             template = {"form": form, "category": schema["category"], "subject": None,
-                        "tags": schema["tags"], "fields": {f["name"]: None for f in schema["fields"]},
+                        "tags": entry_tags(schema["tags"]), "fields": {f["name"]: None for f in schema["fields"]},
                         "images": [], "attachments": []}
             with Path(args.write_template).open("x") as stream:
                 json.dump(template, stream, ensure_ascii=False, indent=2)

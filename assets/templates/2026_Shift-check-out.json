@@ -3,7 +3,8 @@
   "category": "General",
   "subject": null,
   "tags": [
-    "Control Room"
+    "Control Room",
+    "ai-agent"
   ],
   "fields": {
     "Next Shifter": null,

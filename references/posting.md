@@ -75,8 +75,10 @@ python3 "$SKILL/scripts/post_expert_contact.py" --input contact.json --output co
 Add `--post --credentials ../private/ecl_access.txt` only for an authorized post.
 The draft path is optional; without `--output`, XML is printed to stdout.
 Use a meaningful subject, category `General` unless requested otherwise, and
-the form's predefined tags. `--tag TAG` appends a tag; an explicit JSON `tags`
-list replaces the defaults.
+the form's predefined tags. The client always adds `ai-agent` for every entry,
+including generic entries and raw XML posts. `--tag TAG` appends a tag; an
+explicit JSON `tags` list replaces the other defaults but cannot remove
+`ai-agent`. Templates include it, and read-back checks verify its presence.
 
 `--image 'NAME=screenshots/desktop.png'` and `--attach 'NAME=reports/report.txt'`
 add binary attachments. JSON `images` and `attachments` are lists of

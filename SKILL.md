@@ -16,6 +16,11 @@ or configure their locations for the task. Never copy credential
 files into the skill, generated templates, or logs. The separate
 `ecl_access_web.txt` is for reading form definitions, not for API posting.
 
+Every entry created through this skill must include the `ai-agent` tag. The
+bundled client enforces it for generic entries, all predefined forms, and raw
+XML posts. Preserve other requested tags; a custom tag list cannot remove
+`ai-agent`. Verify this tag during read-back.
+
 ## Choose the entry and prepare it
 
 For a generic entry use `scripts/post_entry.py`. For a predefined form select

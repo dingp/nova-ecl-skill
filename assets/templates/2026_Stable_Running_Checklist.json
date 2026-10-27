@@ -3,7 +3,8 @@
   "category": "General",
   "subject": null,
   "tags": [
-    "Run Info"
+    "Run Info",
+    "ai-agent"
   ],
   "fields": {
     "typical_power": null,

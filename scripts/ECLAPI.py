@@ -14,6 +14,13 @@ import urllib.request
 import xml.etree.ElementTree as etree
 from pathlib import Path
 
+REQUIRED_TAG = "ai-agent"
+
+
+def entry_tags(tags=None):
+    """Preserve the caller's tags and include the skill's attribution tag once."""
+    return list(dict.fromkeys(list(tags or []) + [REQUIRED_TAG]))
+
 
 class ECLAPIException(Exception):
     pass
@@ -83,6 +90,12 @@ class ECLConnection:
     def post_xml(self, xml):
         if isinstance(xml, str):
             xml = xml.encode("utf-8")
+        root = etree.fromstring(xml)
+        if root.tag != "entry":
+            raise ValueError("Expected an entry XML document")
+        if not any(tag.get("name") == REQUIRED_TAG for tag in root.findall("tag")):
+            etree.SubElement(root, "tag", name=REQUIRED_TAG)
+            xml = etree.tostring(root, encoding="utf-8")
         return self._request("xml_post", body=xml)
 
     def list(self, category=None, form=None, tag=None, limit=None, after=None,
@@ -124,7 +137,7 @@ class ECLEntry:
         self._form = etree.SubElement(self._entry, "form", name=formname)
         if text:
             self.setValue("text", text)
-        for tag in tags or []:
+        for tag in entry_tags(tags):
             etree.SubElement(self._entry, "tag", name=tag)
 
     def setValue(self, name, value):
